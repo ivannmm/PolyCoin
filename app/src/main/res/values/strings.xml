@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">PolyCoin</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="polyInvest">ПолиИнвест</string>
+    <string name="hello">Привет!</string>
+
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+
+
+
+    <string name="loginExc">Войти</string>
+    <string name="unifiedLoginExc">Войти по единой учетной записи</string>
+    <string name="forgotPassword">Забыли пароль?</string>
+    <string name="rating">Рейтинг</string>
+    <string name="calendar">Календарь</string>
+    <string name="profile">Профиль</string>
+    <string name="shop">Магазин</string>
+    <string name="wallet">Кошелек</string>
+    <string name="portfolio">Портфолио</string>
+
+    <string name="name">Пупа Лупов</string>
+    <string name="group">310101/20001</string>
+    <string name="inst">ИКНТ</string>
+
+    <string name="rate1">Рейтинг 1</string>
+    <string name="rate2">Рейтинг 2</string>
+    <string name="rate3">Рейтинг 3</string>
+
+    <string name="score1">56</string>
+    <string name="score2">20</string>
+    <string name="score3">36</string>
+
+    <string name="filter">Фильтр</string>
+    <string name="search">Поиск</string>
+
+    <string name="remove_filter">Сбросить фильтры</string>
+    <string name="inst_filter">Фильтр по институтам</string>
+</resources>

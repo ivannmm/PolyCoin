@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Button.PolyInvest" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_style</item>
+        <item name="android:textColor">#3d92f1</item>
+        <item name="android:fontFamily">@font/velasans_medium</item>
+    </style>
+
+    <style name="Theme.EdiText.PolyInvest" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">#FFFFFF</item>
+        <item name="android:fontFamily">@font/velasans_medium</item>
+        <item name="android:backgroundTint">#FFFFFF</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+</resources>
