@@ -1,4 +1,4 @@
-package com.fierysoul.polycoin.login;
+package com.fierysoul.polycoin.app.login;
 
 import android.content.Intent;
 import android.os.Bundle;

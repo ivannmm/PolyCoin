@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EBEBEB"
     tools:context=".app.fragments.RatingFragment"
-    android:focusable="false"
-    android:focusableInTouchMode="false">
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top"

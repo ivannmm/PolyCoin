@@ -45,20 +45,14 @@ public class RatingFragment extends Fragment {
 
     }
 
-    View.OnClickListener viewClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            showPopupMenu(v);
-        }
-    };
+    View.OnClickListener viewClickListener = this::showPopupMenu;
 
     @SuppressLint("NonConstantResourceId")
     private void showPopupMenu(View v) {
         PopupMenu popupMenu = new PopupMenu(getActivity(), v);
         popupMenu.inflate(R.menu.filter_menu);
 
-        popupMenu
-                .setOnMenuItemClickListener(item -> {
+        popupMenu.setOnMenuItemClickListener(item -> {
                     switch (item.getItemId()) {
                         case R.id.remove:
                             Toast.makeText(getActivity(),
