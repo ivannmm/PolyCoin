@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.fierysoul.polycoin.app.AppActivity"
+        android:name="com.fierysoul.polycoin.app.main.AppActivity"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
 </navigation>

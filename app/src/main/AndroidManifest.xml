@@ -25,7 +25,7 @@
         </activity>
 
         <activity
-            android:name=".app.AppActivity"
+            android:name=".app.main.AppActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.PolyCoin.NoActionBar">

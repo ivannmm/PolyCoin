@@ -1,22 +1,17 @@
-package com.fierysoul.polycoin.app;
+package com.fierysoul.polycoin.app.main;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.fierysoul.polycoin.R;
-import com.fierysoul.polycoin.app.fragments.CalendarFragment;
-import com.fierysoul.polycoin.app.fragments.ProfileFragment;
-import com.fierysoul.polycoin.app.fragments.RatingFragment;
-import com.fierysoul.polycoin.app.fragments.ShopFragment;
-import com.fierysoul.polycoin.app.fragments.WalletFragment;
+import com.fierysoul.polycoin.app.main.fragments.CalendarFragment;
+import com.fierysoul.polycoin.app.main.fragments.ProfileFragment;
+import com.fierysoul.polycoin.app.main.fragments.RatingFragment;
+import com.fierysoul.polycoin.app.main.fragments.ShopFragment;
+import com.fierysoul.polycoin.app.main.fragments.WalletFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 
 public class AppActivity extends AppCompatActivity {
 

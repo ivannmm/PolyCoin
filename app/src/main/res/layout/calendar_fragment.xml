@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EBEBEB"
-    tools:context=".app.fragments.CalendarFragment">
+    tools:context=".app.main.fragments.CalendarFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainInfo"
@@ -55,6 +55,7 @@
 <!--            app:layout_constraintTop_toBottomOf="@+id/calendarView" />-->
 
         <ScrollView
+            android:id="@+id/events"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
@@ -75,219 +76,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/event_list2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard2"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak3"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard3"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak4"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard4"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak5"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard5"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak6"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard6"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak7"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard7"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak8"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard8"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak9"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard9"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_list10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/editTextToSpeak10"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/border_style" />
-
-                    <ImageView
-                        android:id="@+id/saveCard10"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@drawable/jackdaw" />
-                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 

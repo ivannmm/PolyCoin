@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fierysoul.polycoin.app.AppActivity;
+import com.fierysoul.polycoin.app.main.AppActivity;
 import com.fierysoul.polycoin.R;
 
 public class LoginActivity extends AppCompatActivity {

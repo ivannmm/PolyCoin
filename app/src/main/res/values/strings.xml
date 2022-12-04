@@ -24,6 +24,7 @@
     <string name="forgotPassword">Забыли пароль?</string>
     <string name="rating">Рейтинг</string>
     <string name="calendar">Календарь</string>
+    <string name="event">Мероприятие</string>
     <string name="profile">Профиль</string>
     <string name="shop">Магазин</string>
     <string name="wallet">Кошелек</string>
@@ -48,4 +49,11 @@
     <string name="inst_filter">Фильтр по институтам</string>
 
     <string name="selected_date">Выбранная дата</string>
+
+    <string name="event_desc">Описание:</string>
+    <string name="event_level">Уровень:</string>
+    <string name="event_date">Дата:</string>
+    <string name="event_place">Место:</string>
+    <string name="addFavorites">Добавить в избранное</string>
+    <string name="event_balls">Баллы:</string>
 </resources>

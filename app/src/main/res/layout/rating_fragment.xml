@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EBEBEB"
-    tools:context=".app.fragments.RatingFragment"
+    tools:context=".app.main.fragments.RatingFragment"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,6 +78,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="339dp"
             android:layout_height="49dp"
             android:layout_marginTop="16dp"
@@ -119,6 +120,1016 @@
                 app:layout_constraintVertical_chainStyle="spread" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/velasans_medium"
+                        android:text="1."
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="10"
+                        android:text="Пупа Лупов"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:background="@drawable/border_style" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:text="159"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:background="@drawable/border_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/velasans_medium"
+                        android:text="1."
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="10"
+                        android:text="Пупа Лупов"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:background="@drawable/border_style" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:text="159"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:background="@drawable/border_style" />
+                </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout><LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/velasans_medium"
+                    android:text="1."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="10"
+                    android:text="Пупа Лупов"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:text="159"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/border_style" />
+            </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,4 +1,4 @@
-package com.fierysoul.polycoin.app.fragments;
+package com.fierysoul.polycoin.app.main.fragments;
 
 import androidx.fragment.app.Fragment;
 
