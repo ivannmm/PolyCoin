@@ -93,7 +93,7 @@ public class CalendarFragment extends Fragment {
     void drawEventName(ViewGroup container, EventInfo eventInfo) {
         TextView eventName = new TextView(getActivity());
         Typeface typeface = ResourcesCompat.getFont(requireActivity(), R.font.velasans_medium);
-        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(0, TableLayout.LayoutParams.MATCH_PARENT, 1f);
+        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(0, TableLayout.LayoutParams.MATCH_PARENT, 1);
         textParams.setMargins(0,0,10,0);
         eventName.setLayoutParams(textParams);
         eventName.setTypeface(typeface);

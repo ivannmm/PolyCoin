@@ -1,25 +1,40 @@
 package com.fierysoul.polycoin.app.main.fragments;
 
 import android.annotation.SuppressLint;
+import android.content.res.ColorStateList;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.PopupMenu;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import com.fierysoul.polycoin.R;
 import com.fierysoul.polycoin.databinding.RatingFragmentBinding;
+import com.fierysoul.polycoin.util.RatingUserInfo;
+import com.fierysoul.polycoin.util.Util;
+
+import java.util.List;
 
 public class RatingFragment extends Fragment {
 
     RatingFragmentBinding binding;
 
     TextView filter;
+    LinearLayout ratingList;
+    float scale;
 
     final int REMOVE_FILTER = 0, INST_FILTER = 1;
 
@@ -30,6 +45,34 @@ public class RatingFragment extends Fragment {
         View root = binding.getRoot();
         filter = root.findViewById(R.id.filter);
         filter.setOnClickListener(viewClickListener);
+
+        ratingList = root.findViewById(R.id.rating_container);
+        scale = requireContext().getResources().getDisplayMetrics().density;
+
+        List<RatingUserInfo> rating = Util.getRatingUserInfo();
+
+        for (int i = 0; i < rating.size(); i++) {
+            drawTop(ratingList, rating.get(i), i + 1);
+        }
+
+        EditText searchField = root.findViewById(R.id.editTextTextPersonName2);
+
+        searchField.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+                if(keyEvent.getAction() == KeyEvent.ACTION_DOWN && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    String search = searchField.getText().toString();
+
+                    ratingList.removeAllViews();
+
+                    for (int i = 0; i < rating.size(); i++) {
+                        if (rating.get(i).getName().toLowerCase().contains(search.toLowerCase()))
+                            drawTop(ratingList, rating.get(i), i + 1);
+                    }
+                }
+                return false;
+            }
+        });
 
         return root;
 
@@ -75,4 +118,75 @@ public class RatingFragment extends Fragment {
         binding = null;
     }
 
+    public void drawTop(ViewGroup container, RatingUserInfo userInfo, int position) {
+
+        LinearLayout userLayout = new LinearLayout(getActivity());
+
+        int userLayoutHeight = (int) (40 * scale + 0.5f);
+
+        userLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, userLayoutHeight));
+        userLayout.setOrientation(LinearLayout.HORIZONTAL);
+
+        int padding = (int) (5 * scale + 0.5f);
+
+        userLayout.setPadding(padding, padding, padding, padding);
+
+        drawPosition(userLayout, position);
+        drawName(userLayout, userInfo.getName());
+        drawPoints(userLayout, userInfo.getPoints());
+
+        container.addView(userLayout);
+    }
+
+    @SuppressLint("DefaultLocale")
+    public void drawPosition(ViewGroup container, int position) {
+        TextView posView = new TextView(getActivity());
+        Typeface typeface = ResourcesCompat.getFont(requireActivity(), R.font.velasans_medium);
+        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(0, TableLayout.LayoutParams.MATCH_PARENT, 2);
+        textParams.setMargins(0,0,10,0);
+
+        posView.setLayoutParams(textParams);
+        posView.setTypeface(typeface);
+        posView.setGravity(Gravity.CENTER);
+        posView.setText(String.format("%d.", position));
+
+        container.addView(posView);
+    }
+
+    @SuppressLint("ResourceAsColor")
+    public void drawName(ViewGroup container, String name) {
+        TextView nameView = new TextView(getActivity());
+        Typeface typeface = ResourcesCompat.getFont(requireActivity(), R.font.velasans_medium);
+        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(0, TableLayout.LayoutParams.MATCH_PARENT, 10);
+        textParams.setMargins(0,0,10,0);
+
+        nameView.setLayoutParams(textParams);
+        nameView.setTypeface(typeface);
+        nameView.setTextSize(18);
+        nameView.setTextColor(R.color.black);
+        nameView.setBackground(ContextCompat.getDrawable(requireActivity(), R.drawable.border_style));
+        nameView.setGravity(Gravity.CENTER);
+        nameView.setText(name);
+
+        container.addView(nameView);
+    }
+
+    @SuppressLint({"ResourceAsColor", "DefaultLocale"})
+    public void drawPoints(ViewGroup container, int points) {
+        TextView pointsView = new TextView(getActivity());
+        Typeface typeface = ResourcesCompat.getFont(requireActivity(), R.font.velasans_medium);
+        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(0, TableLayout.LayoutParams.MATCH_PARENT, 3);
+        textParams.setMargins(0,0,10,0);
+
+
+        pointsView.setLayoutParams(textParams);
+        pointsView.setTypeface(typeface);
+        pointsView.setTextSize(18);
+        pointsView.setTextColor(R.color.black);
+        pointsView.setBackground(ContextCompat.getDrawable(requireActivity(), R.drawable.border_style));
+        pointsView.setGravity(Gravity.CENTER);
+        pointsView.setText(String.format("%d",points));
+
+        container.addView(pointsView);
+    }
 }

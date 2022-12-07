@@ -4,7 +4,10 @@ import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class Util {
 
@@ -30,5 +33,17 @@ public class Util {
         eventInfoList.add(new EventInfo(17, "319", "123", desc, "2134", cal, null));
         eventInfoList.add(new EventInfo(15, "3111", "123", desc, "2134", cal, null));
         return eventInfoList;
+    }
+
+    public static List<RatingUserInfo> getRatingUserInfo() {
+        List<RatingUserInfo> rating = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i < 50; i++) {
+            rating.add(new RatingUserInfo(String.format("%s%d", "Тестовое Имя", i), "ИКНТ", random.nextInt(500)));
+        }
+
+        Collections.sort(rating);
+
+        return rating;
     }
 }
