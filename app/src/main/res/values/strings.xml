@@ -5,7 +5,7 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
 
-    <string name="polyInvest">ПолиИнвест</string>
+    <string name="polyInvest">ПолиКапитал</string>
     <string name="hello">Привет!</string>
 
     <string name="previous">Previous</string>
@@ -17,7 +17,7 @@
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
 
-
+    <string name="coins">1054</string>
 
     <string name="loginExc">Войти</string>
     <string name="unifiedLoginExc">Войти по единой учетной записи</string>
@@ -32,21 +32,23 @@
 
     <string name="name">Морозов Иван</string>
     <string name="group">310101/20001</string>
-    <string name="inst">ИКНТ</string>
+    <string name="inst_IKNT">ИКНТ</string>
 
-    <string name="rate1">Рейтинг 1</string>
-    <string name="rate2">Рейтинг 2</string>
-    <string name="rate3">Рейтинг 3</string>
+    <string name="rate1">Управленческие навыки</string>
+    <string name="rate2">Цифровая грамотность</string>
+    <string name="rate3">Инициативность</string>
 
-    <string name="score1">56</string>
-    <string name="score2">20</string>
-    <string name="score3">36</string>
+    <string name="score1">56%</string>
+    <string name="score2">20%</string>
+    <string name="score3">36%</string>
 
     <string name="filter">Фильтр</string>
     <string name="search">Поиск</string>
 
     <string name="remove_filter">Сбросить фильтры</string>
     <string name="inst_filter">Фильтр по институтам</string>
+    <string name="inst">Институт</string>
+    <string name="course">Курс</string>
 
     <string name="selected_date">Выбранная дата</string>
 
@@ -56,4 +58,14 @@
     <string name="event_place">Место:</string>
     <string name="addFavorites">Добавить в избранное</string>
     <string name="event_balls">Баллы:</string>
+
+    <string name="balance">Баланс</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="all">Все</string>
+    <string name="scope_filter">Сфера деятельности</string>
 </resources>

@@ -12,7 +12,7 @@
         android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/mainInfo"
+        app:layout_constraintBottom_toTopOf="@+id/inst_filter"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="1">
 
@@ -57,7 +57,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainInfo"
+        android:id="@+id/inst_filter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_weight="8">
 
         <View
-            android:id="@+id/view3"
+            android:id="@+id/inst_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
@@ -126,7 +126,7 @@
             android:layout_height="0dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="12dp"
-            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintBottom_toBottomOf="@+id/inst_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"

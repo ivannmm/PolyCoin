@@ -8,7 +8,7 @@
     tools:context=".app.main.fragments.CalendarFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainInfo"
+        android:id="@+id/inst_filter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,7 @@
         app:layout_constraintVertical_weight="8">
 
         <View
-            android:id="@+id/view3"
+            android:id="@+id/inst_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
@@ -40,7 +40,7 @@
             android:scrollbars="vertical"
             app:layout_constraintEnd_toStartOf="@+id/guideline5"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            app:layout_constraintTop_toTopOf="@+id/inst_view" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/selectedDateText"-->
@@ -109,7 +109,7 @@
         android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/mainInfo"
+        app:layout_constraintBottom_toTopOf="@+id/inst_filter"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="1"
         >

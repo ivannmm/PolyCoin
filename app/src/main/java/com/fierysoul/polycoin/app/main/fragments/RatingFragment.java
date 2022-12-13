@@ -22,11 +22,13 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import com.fierysoul.polycoin.R;
+import com.fierysoul.polycoin.app.main.settings.FilterSettings;
 import com.fierysoul.polycoin.databinding.RatingFragmentBinding;
 import com.fierysoul.polycoin.util.RatingUserInfo;
 import com.fierysoul.polycoin.util.Util;
 
 import java.util.List;
+import java.util.Objects;
 
 public class RatingFragment extends Fragment {
 
@@ -36,6 +38,8 @@ public class RatingFragment extends Fragment {
     LinearLayout ratingList;
     float scale;
 
+    FilterSettings filterSettings;
+
     final int REMOVE_FILTER = 0, INST_FILTER = 1;
 
     @Override
@@ -44,7 +48,9 @@ public class RatingFragment extends Fragment {
         binding = RatingFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         filter = root.findViewById(R.id.filter);
-        filter.setOnClickListener(viewClickListener);
+
+        filterSettings = new FilterSettings();
+        filter.setOnClickListener(view -> requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FilterFragment(filterSettings)).commit());
 
         ratingList = root.findViewById(R.id.rating_container);
         scale = requireContext().getResources().getDisplayMetrics().density;
@@ -57,22 +63,21 @@ public class RatingFragment extends Fragment {
 
         EditText searchField = root.findViewById(R.id.editTextTextPersonName2);
 
-        searchField.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
-                if(keyEvent.getAction() == KeyEvent.ACTION_DOWN && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    String search = searchField.getText().toString();
+        searchField.setOnKeyListener((view, keyCode, keyEvent) -> {
+            if(keyEvent.getAction() == KeyEvent.ACTION_DOWN && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                String search = searchField.getText().toString();
 
-                    ratingList.removeAllViews();
+                ratingList.removeAllViews();
 
-                    for (int i = 0; i < rating.size(); i++) {
-                        if (rating.get(i).getName().toLowerCase().contains(search.toLowerCase()))
-                            drawTop(ratingList, rating.get(i), i + 1);
-                    }
+                for (int i = 0; i < rating.size(); i++) {
+                    if (rating.get(i).getName().toLowerCase().contains(search.toLowerCase()))
+                        drawTop(ratingList, rating.get(i), i + 1);
                 }
-                return false;
             }
+            return false;
         });
+
+
 
         return root;
 
@@ -83,34 +88,34 @@ public class RatingFragment extends Fragment {
 
     }
 
-    View.OnClickListener viewClickListener = this::showPopupMenu;
-
-    @SuppressLint("NonConstantResourceId")
-    private void showPopupMenu(View v) {
-        PopupMenu popupMenu = new PopupMenu(getActivity(), v);
-        popupMenu.inflate(R.menu.filter_menu);
-
-        popupMenu.setOnMenuItemClickListener(item -> {
-                    switch (item.getItemId()) {
-                        case R.id.remove:
-                            Toast.makeText(getActivity(),
-                                    "Вы сбросили все фильтры",
-                                    Toast.LENGTH_SHORT).show();
-                            return true;
-                        case R.id.inst:
-                            Toast.makeText(getActivity(),
-                                    "Вы выбрали фильтр по институтам",
-                                    Toast.LENGTH_SHORT).show();
-                            return true;
-                        default:
-                            return false;
-                    }
-                });
-
-        popupMenu.setOnDismissListener(menu -> Toast.makeText(getActivity(), "onDismiss",
-                Toast.LENGTH_SHORT).show());
-        popupMenu.show();
-    }
+//    View.OnClickListener viewClickListener = this::showPopupMenu;
+//
+//    @SuppressLint("NonConstantResourceId")
+//    private void showPopupMenu(View v) {
+//        PopupMenu popupMenu = new PopupMenu(getActivity(), v);
+//        popupMenu.inflate(R.menu.filter_menu);
+//
+//        popupMenu.setOnMenuItemClickListener(item -> {
+//                    switch (item.getItemId()) {
+//                        case R.id.remove:
+//                            Toast.makeText(getActivity(),
+//                                    "Вы сбросили все фильтры",
+//                                    Toast.LENGTH_SHORT).show();
+//                            return true;
+//                        case R.id.inst:
+//                            Toast.makeText(getActivity(),
+//                                    "Вы выбрали фильтр по институтам",
+//                                    Toast.LENGTH_SHORT).show();
+//                            return true;
+//                        default:
+//                            return false;
+//                    }
+//                });
+//
+//        popupMenu.setOnDismissListener(menu -> Toast.makeText(getActivity(), "onDismiss",
+//                Toast.LENGTH_SHORT).show());
+//        popupMenu.show();
+//    }
 
     @Override
     public void onDestroyView() {
@@ -148,6 +153,7 @@ public class RatingFragment extends Fragment {
         posView.setLayoutParams(textParams);
         posView.setTypeface(typeface);
         posView.setGravity(Gravity.CENTER);
+        posView.setTextColor(getResources().getColor(R.color.black, null));
         posView.setText(String.format("%d.", position));
 
         container.addView(posView);
@@ -163,7 +169,7 @@ public class RatingFragment extends Fragment {
         nameView.setLayoutParams(textParams);
         nameView.setTypeface(typeface);
         nameView.setTextSize(18);
-        nameView.setTextColor(R.color.black);
+        nameView.setTextColor(getResources().getColor(R.color.black, null));
         nameView.setBackground(ContextCompat.getDrawable(requireActivity(), R.drawable.border_style));
         nameView.setGravity(Gravity.CENTER);
         nameView.setText(name);
@@ -182,7 +188,7 @@ public class RatingFragment extends Fragment {
         pointsView.setLayoutParams(textParams);
         pointsView.setTypeface(typeface);
         pointsView.setTextSize(18);
-        pointsView.setTextColor(R.color.black);
+        pointsView.setTextColor(getResources().getColor(R.color.black, null));
         pointsView.setBackground(ContextCompat.getDrawable(requireActivity(), R.drawable.border_style));
         pointsView.setGravity(Gravity.CENTER);
         pointsView.setText(String.format("%d",points));

@@ -46,7 +46,7 @@ public class EventFragment extends Fragment {
 
         Calendar cal = eventInfo.fullDate;
 
-        @SuppressLint("DefaultLocale") String date = String.format("%d.%d.%d %d:%d", cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
+        @SuppressLint("DefaultLocale") String date = String.format("%d.%d.%d %d:%d", cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.YEAR), cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
 
         eventDate = root.findViewById(R.id.event_date);
         eventDate.setText(date);
@@ -55,10 +55,6 @@ public class EventFragment extends Fragment {
         eventPlace.setText(eventInfo.place);
         return root;
 
-    }
-
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
