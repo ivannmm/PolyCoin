@@ -27,8 +27,7 @@ public class Util {
         cal.set(2022, 11, 10, 18, 30);
         eventInfoList.add(new EventInfo(1, "REGREEN x YESLAB", "Университетский", "В программе:\n" +
                 "— диалог о растительном питании с Лизой Чуршуковой, координатором Пищи для ума. Развеем мифы о растительном питании вместе \uD83C\uDF31\n" +
-                "— рецепты и советы по приготовлению от YESLAB;\n" +
-                "— согревающий чай с невероятными тофниками. Приходи, чтобы попробовать!" , "Студклуб, коворкинг Lepota", cal, null));
+                "— рецепты и советы по приготовлению от YESLAB!" , "Студклуб, коворкинг Lepota", cal, null));
         eventInfoList.add(new EventInfo(12, "Чистый ноябрь", "Университетский", "Если хочешь присоединиться к нам, расскажи в комментариях в группе VK (@regreen_polytech), как хранение отходов организовано у тебя дома и куда обычно их сдаешь (можно даже приложить фото!)", "Студклуб, коворкинг Lepota", cal, null));
 
 
@@ -41,8 +40,7 @@ public class Util {
 
         eventInfoList.add(new EventInfo(14, "REGREEN x YESLAB", "Университетский", "В программе:\n" +
                 "— диалог о растительном питании с Лизой Чуршуковой, координатором Пищи для ума. Развеем мифы о растительном питании вместе \uD83C\uDF31\n" +
-                "— рецепты и советы по приготовлению от YESLAB;\n" +
-                "— согревающий чай с невероятными тофниками. Приходи, чтобы попробовать!" , "Студклуб, коворкинг Lepota", cal, null));
+                "— рецепты и советы по приготовлению от YESLAB!" , "Студклуб, коворкинг Lepota", cal, null));
         eventInfoList.add(new EventInfo(125, "Чистый ноябрь", "Университетский", "Если хочешь присоединиться к нам, расскажи в комментариях в группе VK (@regreen_polytech), как хранение отходов организовано у тебя дома и куда обычно их сдаешь (можно даже приложить фото!)", "Студклуб, коворкинг Lepota", cal, null));
 
         return eventInfoList;
@@ -60,7 +58,7 @@ public class Util {
             String surname = (name.charAt(name.length() - 1) == 'а') ? surname_female[random.nextInt(surname_female.length)] : surname_male[random.nextInt(surname_male.length)];
             rating.add(new RatingUserInfo(String.format("%s %s", surname, name), InstEnum.FIZMEH, random.nextInt(500), random.nextInt(500), random.nextInt(500), random.nextInt(500), random.nextInt(500)));
         }
-
+        rating.sort((ratingUserInfo, t1) -> t1.getPoints().compareTo(ratingUserInfo.getPoints()));
         return rating;
     }
 }

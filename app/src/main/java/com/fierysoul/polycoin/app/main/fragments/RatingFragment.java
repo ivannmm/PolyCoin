@@ -27,6 +27,9 @@ import com.fierysoul.polycoin.databinding.RatingFragmentBinding;
 import com.fierysoul.polycoin.util.RatingUserInfo;
 import com.fierysoul.polycoin.util.Util;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
@@ -56,6 +59,7 @@ public class RatingFragment extends Fragment {
         scale = requireContext().getResources().getDisplayMetrics().density;
 
         List<RatingUserInfo> rating = Util.getRatingUserInfo();
+
 
         for (int i = 0; i < rating.size(); i++) {
             drawTop(ratingList, rating.get(i), i + 1);

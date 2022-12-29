@@ -126,38 +126,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/polyCoins"
+        android:id="@+id/directionView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scope_filter"
         app:layout_constraintVertical_weight="6">
 
-        <!--        <androidx.constraintlayout.widget.Guideline-->
-        <!--            android:id="@+id/guideline8"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:orientation="vertical"-->
-        <!--            app:layout_constraintGuide_percent="0.5" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/textView2"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginEnd="4dp"-->
-        <!--            android:fontFamily="@font/velasans_medium"-->
-
-        <!--            android:gravity="center"-->
-
-        <!--            android:text="@string/balance"-->
-        <!--            android:textColor="#000000"-->
-
-        <!--            android:textSize="26sp"-->
-
-        <!--            app:layout_constraintBottom_toBottomOf="@+id/view7"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/guideline8"-->
-        <!--            app:layout_constraintTop_toTopOf="@+id/view7"-->
-        <!--            />-->
 
         <View
             android:id="@+id/view7"
@@ -168,14 +143,73 @@
             android:background="@drawable/block_style"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintVertical_bias="1.0" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_direction_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_direction_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_direction_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
 
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/velasans_medium"
+            android:text="@string/direction_filter"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_direction_3"
+            app:layout_constraintStart_toStartOf="@+id/guideline_direction_2"
+            app:layout_constraintTop_toTopOf="@+id/guideline_direction_1" />
+
+        <Button
+            android:id="@+id/applyFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:textColor="@color/white"
+            android:text="@string/apply_filter"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_direction_3"
+            app:layout_constraintStart_toStartOf="@+id/guideline_direction_2" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/applyFilter"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_direction_3"
+            app:layout_constraintStart_toStartOf="@+id/guideline_direction_2"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <LinearLayout
+                android:id="@+id/direction_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/course_filter"
@@ -364,7 +398,7 @@
         android:id="@+id/scope_filter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/polyCoins"
+        app:layout_constraintBottom_toTopOf="@+id/directionView"
         app:layout_constraintTop_toBottomOf="@+id/course_filter"
         app:layout_constraintVertical_weight="1.4">
 

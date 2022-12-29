@@ -68,4 +68,6 @@
     <string name="_6">6</string>
     <string name="all">Все</string>
     <string name="scope_filter">Сфера деятельности</string>
+    <string name="direction_filter">Направление подготовки</string>
+    <string name="apply_filter">Применить фильтр</string>
 </resources>
