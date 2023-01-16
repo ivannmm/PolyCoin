@@ -1,4 +1,4 @@
-package com.fierysoul.polycoin.app.main.fragments;
+package com.fierysoul.polycoin.app.main.fragments.additional;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -7,26 +7,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.fierysoul.polycoin.R;
 import com.fierysoul.polycoin.databinding.EventFragmentBinding;
-import com.fierysoul.polycoin.databinding.ProfileFragmentBinding;
-import com.fierysoul.polycoin.util.EventInfo;
+import com.fierysoul.polycoin.items.EventItem;
 
 import java.util.Calendar;
 
 public class EventFragment extends Fragment {
 
-    EventInfo eventInfo;
+    EventItem eventItem;
 
     EventFragmentBinding binding;
 
     TextView eventName, eventDesc, eventLevel, eventDate, eventPlace;
 
-    public EventFragment(EventInfo eventInfo) {
-        this.eventInfo = eventInfo;
+    public EventFragment(EventItem eventItem) {
+        this.eventItem = eventItem;
     }
 
     @Override
@@ -36,15 +34,15 @@ public class EventFragment extends Fragment {
         View root = binding.getRoot();
 
         eventName = root.findViewById(R.id.event_name);
-        eventName.setText(eventInfo.name);
+        eventName.setText(eventItem.name);
 
         eventDesc = root.findViewById(R.id.event_desc);
-        eventDesc.setText(eventInfo.description);
+        eventDesc.setText(eventItem.description);
 
         eventLevel = root.findViewById(R.id.event_level);
-        eventLevel.setText(eventInfo.level);
+        eventLevel.setText(eventItem.level);
 
-        Calendar cal = eventInfo.fullDate;
+        Calendar cal = eventItem.fullDate;
 
         @SuppressLint("DefaultLocale") String date = String.format("%d.%d.%d %d:%d", cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.YEAR), cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
 
@@ -52,7 +50,7 @@ public class EventFragment extends Fragment {
         eventDate.setText(date);
 
         eventPlace = root.findViewById(R.id.event_place);
-        eventPlace.setText(eventInfo.place);
+        eventPlace.setText(eventItem.place);
         return root;
 
     }

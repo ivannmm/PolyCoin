@@ -1,4 +1,4 @@
-package com.fierysoul.polycoin.app.main.fragments;
+package com.fierysoul.polycoin.app.main.fragments.main;
 
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
@@ -19,13 +19,13 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import com.fierysoul.polycoin.R;
+import com.fierysoul.polycoin.app.main.fragments.additional.EventFragment;
 import com.fierysoul.polycoin.databinding.CalendarFragmentBinding;
-import com.fierysoul.polycoin.util.EventInfo;
+import com.fierysoul.polycoin.items.EventItem;
 import com.fierysoul.polycoin.util.Util;
 
 import java.util.Calendar;
 import java.util.List;
-import java.util.Objects;
 
 public class CalendarFragment extends Fragment {
 
@@ -72,9 +72,9 @@ public class CalendarFragment extends Fragment {
 
     @SuppressLint("SetTextI18n")
     void redrawEvents() {
-        List<EventInfo> eventInfoList = Util.getEventInfo();
+        List<EventItem> eventItemList = Util.getEventInfo();
         eventList.removeAllViews();
-        for (int i = 0; i < eventInfoList.size(); i++) {
+        for (int i = 0; i < eventItemList.size(); i++) {
             LinearLayout containerEvent = new LinearLayout(getActivity());
 
             containerEvent.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -83,14 +83,14 @@ public class CalendarFragment extends Fragment {
             int pixels = (int) (5 * scale + 0.5f);
             containerEvent.setPadding(pixels, pixels, pixels, pixels);
 
-            drawEventName(containerEvent, eventInfoList.get(i));
-            drawEventJackdaw(containerEvent, eventInfoList.get(i));
+            drawEventName(containerEvent, eventItemList.get(i));
+            drawEventJackdaw(containerEvent, eventItemList.get(i));
 
             eventList.addView(containerEvent);
         }
     }
 
-    void drawEventName(ViewGroup container, EventInfo eventInfo) {
+    void drawEventName(ViewGroup container, EventItem eventItem) {
         TextView eventName = new TextView(getActivity());
         Typeface typeface = ResourcesCompat.getFont(requireActivity(), R.font.velasans_medium);
         LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(0, TableLayout.LayoutParams.MATCH_PARENT, 1);
@@ -99,26 +99,26 @@ public class CalendarFragment extends Fragment {
         eventName.setTypeface(typeface);
         eventName.setBackground(ContextCompat.getDrawable(requireActivity(), R.drawable.border_style));
         eventName.setGravity(Gravity.CENTER);
-        eventName.setText(eventInfo.name);
+        eventName.setText(eventItem.name);
 
 
         eventName.setOnClickListener(view -> {
-            EventFragment eventFragment = new EventFragment(eventInfo);
+            EventFragment eventFragment = new EventFragment(eventItem);
             requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, eventFragment).commit();
         });
 
         container.addView(eventName);
     }
 
-    void drawEventJackdaw(ViewGroup container, EventInfo eventInfo) {
+    void drawEventJackdaw(ViewGroup container, EventItem eventItem) {
         ImageView eventJackdaw = new ImageView(getActivity());
         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(Util.getDP(requireContext(), 48), Util.getDP(requireContext(), 48));
         eventJackdaw.setLayoutParams(imageParams);
 
-        drawState(eventJackdaw, eventInfo.isFavorite(), R.drawable.jackdaw_active, R.drawable.jackdaw);
+        drawState(eventJackdaw, eventItem.isFavorite(), R.drawable.jackdaw_active, R.drawable.jackdaw);
 
         eventJackdaw.setOnClickListener(view -> {
-            drawState(eventJackdaw, eventInfo.changeFavorite(), R.drawable.jackdaw_active, R.drawable.jackdaw);
+            drawState(eventJackdaw, eventItem.changeFavorite(), R.drawable.jackdaw_active, R.drawable.jackdaw);
         });
 
         container.addView(eventJackdaw);

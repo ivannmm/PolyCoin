@@ -1,4 +1,4 @@
-package com.fierysoul.polycoin.app.main.fragments;
+package com.fierysoul.polycoin.app.main.fragments.additional;
 
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;

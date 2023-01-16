@@ -1,7 +1,6 @@
-package com.fierysoul.polycoin.app.main.fragments;
+package com.fierysoul.polycoin.app.main.fragments.main;
 
 import android.annotation.SuppressLint;
-import android.content.res.ColorStateList;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -11,10 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -22,16 +19,13 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import com.fierysoul.polycoin.R;
+import com.fierysoul.polycoin.app.main.fragments.additional.FilterFragment;
 import com.fierysoul.polycoin.app.main.settings.FilterSettings;
 import com.fierysoul.polycoin.databinding.RatingFragmentBinding;
-import com.fierysoul.polycoin.util.RatingUserInfo;
+import com.fierysoul.polycoin.items.RatingUserItem;
 import com.fierysoul.polycoin.util.Util;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 
 public class RatingFragment extends Fragment {
 
@@ -58,7 +52,7 @@ public class RatingFragment extends Fragment {
         ratingList = root.findViewById(R.id.rating_container);
         scale = requireContext().getResources().getDisplayMetrics().density;
 
-        List<RatingUserInfo> rating = Util.getRatingUserInfo();
+        List<RatingUserItem> rating = Util.getRatingUserInfo();
 
 
         for (int i = 0; i < rating.size(); i++) {
@@ -81,10 +75,7 @@ public class RatingFragment extends Fragment {
             return false;
         });
 
-
-
         return root;
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -127,7 +118,7 @@ public class RatingFragment extends Fragment {
         binding = null;
     }
 
-    public void drawTop(ViewGroup container, RatingUserInfo userInfo, int position) {
+    public void drawTop(ViewGroup container, RatingUserItem userInfo, int position) {
 
         LinearLayout userLayout = new LinearLayout(getActivity());
 

@@ -1,4 +1,4 @@
-package com.fierysoul.polycoin.util;
+package com.fierysoul.polycoin.items;
 
 import androidx.annotation.Nullable;
 
@@ -8,10 +8,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class EventInfo {
+public class EventItem {
 
-    public static final Map<Calendar, List<EventInfo>> ALL_EVENTS = new HashMap<>();
-    public static final Map<Calendar, List<EventInfo>> FAVORITE_EVENTS = new HashMap<>();
+    public static final Map<Calendar, List<EventItem>> ALL_EVENTS = new HashMap<>();
+    public static final Map<Calendar, List<EventItem>> FAVORITE_EVENTS = new HashMap<>();
 
     public final int id;
 
@@ -23,7 +23,7 @@ public class EventInfo {
 
     boolean isFavorite;
 
-    public EventInfo(int id, String name, String level, String description, String place, Calendar fullDate, Map<String, Integer> roles_points) {
+    public EventItem(int id, String name, String level, String description, String place, Calendar fullDate, Map<String, Integer> roles_points) {
         this.id = id;
         this.name = name;
         this.level = level;
@@ -37,10 +37,10 @@ public class EventInfo {
         Calendar simpleDate = getSimpleDate(fullDate);
 
         if (ALL_EVENTS.containsKey(simpleDate)) {
-            List<EventInfo> list = ALL_EVENTS.get(simpleDate);
+            List<EventItem> list = ALL_EVENTS.get(simpleDate);
             list.add(this);
         } else {
-            List<EventInfo> list = new ArrayList<>();
+            List<EventItem> list = new ArrayList<>();
             list.add(this);
             ALL_EVENTS.put(simpleDate, list);
         }
@@ -56,7 +56,7 @@ public class EventInfo {
 
     public boolean changeFavorite() {
         Calendar simpleDate = getSimpleDate(fullDate);
-        List<EventInfo> favorites = FAVORITE_EVENTS.get(simpleDate);
+        List<EventItem> favorites = FAVORITE_EVENTS.get(simpleDate);
         isFavorite = !isFavorite;
 
         if (!isFavorite) {
@@ -67,7 +67,7 @@ public class EventInfo {
             if (favorites != null) {
                 favorites.add(this);
             } else {
-                List<EventInfo> list = new ArrayList<>();
+                List<EventItem> list = new ArrayList<>();
                 list.add(this);
                 FAVORITE_EVENTS.put(simpleDate, list);
             }
@@ -81,9 +81,9 @@ public class EventInfo {
 
     @Override
     public boolean equals(@Nullable Object obj) {
-        if (!(obj instanceof EventInfo))
+        if (!(obj instanceof EventItem))
             return false;
-        EventInfo other = (EventInfo) obj;
+        EventItem other = (EventItem) obj;
         return other.id == this.id;
     }
 }

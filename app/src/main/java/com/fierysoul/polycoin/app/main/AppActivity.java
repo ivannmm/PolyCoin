@@ -6,11 +6,11 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fierysoul.polycoin.R;
-import com.fierysoul.polycoin.app.main.fragments.CalendarFragment;
-import com.fierysoul.polycoin.app.main.fragments.ProfileFragment;
-import com.fierysoul.polycoin.app.main.fragments.RatingFragment;
-import com.fierysoul.polycoin.app.main.fragments.ShopFragment;
-import com.fierysoul.polycoin.app.main.fragments.WalletFragment;
+import com.fierysoul.polycoin.app.main.fragments.main.CalendarFragment;
+import com.fierysoul.polycoin.app.main.fragments.main.ProfileFragment;
+import com.fierysoul.polycoin.app.main.fragments.main.RatingFragment;
+import com.fierysoul.polycoin.app.main.fragments.main.ShopFragment;
+import com.fierysoul.polycoin.app.main.fragments.main.WalletFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AppActivity extends AppCompatActivity {

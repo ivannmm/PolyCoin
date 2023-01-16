@@ -1,4 +1,4 @@
-package com.fierysoul.polycoin.app.main.fragments;
+package com.fierysoul.polycoin.app.main.fragments.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

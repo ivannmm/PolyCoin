@@ -1,14 +1,14 @@
-package com.fierysoul.polycoin.util;
+package com.fierysoul.polycoin.items;
 
 import com.fierysoul.polycoin.util.enums.InstEnum;
 
-public class RatingUserInfo {
+public class RatingUserItem {
 
     final InstEnum inst;
     final String name;
     final Integer culturePoints, sportPoints, societyPoints, studiesPoints, sciencePoints;
 
-    public RatingUserInfo(String name, InstEnum inst, int culturePoints, int sportPoints, int societyPoints, int studiesPoints, int sciencePoints) {
+    public RatingUserItem(String name, InstEnum inst, int culturePoints, int sportPoints, int societyPoints, int studiesPoints, int sciencePoints) {
         this.name = name;
         this.inst = inst;
         this.culturePoints = culturePoints;

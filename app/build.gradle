@@ -2,6 +2,7 @@ buildscript {
     repositories {
         jcenter()
         google()  // new as of Gradle v4.1 (not to be confused the the Android Gradle plugin below)
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
@@ -60,4 +61,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${appCompatVersion}"
     implementation "com.google.android.material:material:${designSupportVersion}"
     implementation "androidx.recyclerview:recyclerview:${recyclerViewVersion}"
+
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
 }

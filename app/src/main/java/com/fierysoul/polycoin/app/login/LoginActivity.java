@@ -6,8 +6,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.fierysoul.polycoin.app.main.AppActivity;
 import com.fierysoul.polycoin.R;
+import com.fierysoul.polycoin.items.ShopItem;
+import com.fierysoul.polycoin.util.Util;
+
+import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,5 +25,14 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, AppActivity.class);
             startActivity(intent);
         });
+
+        cacheShopImages();
+    }
+
+    void cacheShopImages () {
+        List<ShopItem> shopItems = Util.getShopItemList();
+        for (ShopItem shopItem : shopItems) {
+            ShopItem.CACHED_IMAGES.put(shopItem.id, Glide.with(this).load(shopItem.imgUrl));
+        }
     }
 }
